@@ -59,3 +59,25 @@ var obj = {
     }
 };
 console.log(obj.sum(1, 5));
+
+
+// atribuindo valor com objeto em uma propriedade
+
+var propName = 'test';
+
+var obj = {};
+
+obj[propName] = 'prop value';
+
+console.log(obj);
+
+
+// com ecma6
+
+var propName = 'test';
+
+var obj = {
+    [propName + 'concat']: 'prop value'
+};
+
+console.log(obj);
