@@ -46,3 +46,37 @@ const sum = (a, b, ...rest) => {
 
 console.log(sum(5, 5, 5, 2, 3));
 
+
+
+// rest operator, spread operator
+//  spread - utilizado em strings, arrays, objects e objetos iteraveis
+
+const multiply = (...args) => args.reduce((acc, value) => acc * value, 1);
+
+const sum = (...rest) => {
+    return multiply(...rest);
+};
+
+console.log(sum(5, 5, 5, 2, 3));
+
+// ex. spread quebrando cada letra da frase(string) e passar para uma proxima função
+
+const str = 'Digital Innovation One';
+
+function logArgs(...args) {
+    console.log(args);
+}
+
+logArgs(...str);
+
+
+//ex.2 com array
+
+const arr = [1, 2, 3, 4];
+
+function logArgs() {
+    console.log(arguments);
+}
+
+logArgs(...arr);
+
